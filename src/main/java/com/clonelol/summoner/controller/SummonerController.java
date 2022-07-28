@@ -1,5 +1,6 @@
 package com.clonelol.summoner.controller;
 
+import com.clonelol.config.VersionCheck;
 import com.clonelol.summoner.apidto.SummonerDto;
 import com.google.gson.Gson;
 import org.springframework.http.RequestEntity;
@@ -27,6 +28,7 @@ public class SummonerController {
     // 소환사 전적검색
     @GetMapping("/lol/api/summoner/search/{summonerName}")
     public String searchSummoner(@PathVariable("summonerName") String summonerName, Model model, HttpServletRequest req){
+        VersionCheck.checkVersion();
 
         String result = "", line;
         BufferedReader br = null;
