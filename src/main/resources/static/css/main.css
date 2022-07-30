@@ -1,0 +1,10 @@
+.search-container {
+    margin: 0 auto;
+    width: 800px;
+    height: 40px;
+}
+.search-container #search-home {
+    width: 100%;
+    height: 100%;
+
+}
